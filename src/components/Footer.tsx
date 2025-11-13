@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -6,6 +6,15 @@ const Footer = () => {
       <div className="container px-4 mx-auto">
         <div className="flex flex-col items-center justify-center gap-6">
           <div className="flex items-center gap-6">
+            <a 
+              href="https://www.instagram.com/djfrednunnenkamp/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-accent transition-colors"
+              aria-label="Instagram"
+            >
+              <Instagram className="w-6 h-6" />
+            </a>
             <a 
               href="mailto:contato@fredericonunnenkamp.com" 
               className="text-muted-foreground hover:text-primary transition-colors"
