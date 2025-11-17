@@ -1,13 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Briefcase, Users, Wrench } from "lucide-react";
+import { Briefcase, Wrench } from "lucide-react";
 
 const experiences = [
-  {
-    icon: Users,
-    title: "Robótica & Makerspace",
-    role: "Membro Ativo e Mentor",
-    description: "Atuação em equipes FLL/FTC/RescBots, mentor por 3 anos, 4º lugar no Robot Game 2025. Gestão de compras, orçamentos e produções sob demanda.",
-  },
   {
     icon: Wrench,
     title: "Oficina Mecânica",
@@ -33,7 +27,7 @@ const ExperienceSection = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {experiences.map((exp, index) => (
             <Card 
               key={index}
