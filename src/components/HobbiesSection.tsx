@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Music, Sailboat } from "lucide-react";
+import { Music, Sailboat, Users } from "lucide-react";
 
 const hobbies = [
   {
@@ -14,6 +14,12 @@ const hobbies = [
     description: "Integro equipe de HP, participação em regatas nacionais e internacionais incluindo Campeonato Brasileiro e Mundial 2025 em Porto Alegre. Habilitações: Arrais Amador e Motonauta.",
     gradient: "from-primary/20 to-primary/5",
   },
+  {
+    icon: Users,
+    title: "Robótica & Makerspace",
+    description: "Atuação em equipes FLL/FTC/RescBots, mentor por 3 anos, 4º lugar no Robot Game 2025. Gestão de compras, orçamentos e produções sob demanda.",
+    gradient: "from-primary/30 to-primary/10",
+  },
 ];
 
 const HobbiesSection = () => {
@@ -27,7 +33,7 @@ const HobbiesSection = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {hobbies.map((hobby, index) => (
             <Card 
               key={index}
