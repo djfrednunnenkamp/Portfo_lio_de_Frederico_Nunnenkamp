@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Briefcase, Wrench, Box } from "lucide-react";
+import { AirVent, Wrench, Box } from "lucide-react";
 
 const experiences = [
   {
@@ -15,7 +15,7 @@ const experiences = [
     description: "Experiência em manutenção de veículos, desenvolvendo disciplina e cuidado com ferramentas e procedimentos.",
   },
   {
-    icon: Briefcase,
+    icon: AirVent,
     title: "Empresa de Ar-Condicionado",
     role: "Estágio Prático - 1 mês",
     description: "Aprendizado em montagem, desmontagem e limpeza de aparelhos, com foco em qualidade e segurança.",

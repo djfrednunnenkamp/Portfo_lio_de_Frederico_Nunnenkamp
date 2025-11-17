@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Music, Sailboat, Users } from "lucide-react";
+import { Music, Sailboat, Bot } from "lucide-react";
 
 const hobbies = [
   {
@@ -15,7 +15,7 @@ const hobbies = [
     gradient: "from-primary/20 to-primary/5",
   },
   {
-    icon: Users,
+    icon: Bot,
     title: "Robótica",
     description: "Atuação em equipes FLL/FTC/RescBots, mentor por 3 anos, 4º lugar no Robot Game 2025. Paixão por competições e ensino de robótica.",
     gradient: "from-primary/30 to-primary/10",
