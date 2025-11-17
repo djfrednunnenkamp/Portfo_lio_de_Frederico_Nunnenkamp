@@ -9,6 +9,19 @@ const Hero = () => {
     element?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const calculateAge = () => {
+    const birthDate = new Date(2007, 8, 18); // Month is 0-indexed, so 8 = September
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    
+    return age;
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div 
@@ -36,8 +49,11 @@ const Hero = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6">
               Frederico Nunnenkamp
             </h1>
-            <p className="text-xl md:text-2xl text-primary-foreground/90 mb-4">
+            <p className="text-xl md:text-2xl text-primary-foreground/90 mb-2">
               Maker & Engenheiro
+            </p>
+            <p className="text-lg md:text-xl text-primary-foreground/80 mb-4">
+              {calculateAge()} anos
             </p>
             <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl">
               Transformando ideias em realidade através de impressão 3D, automação, eletrônica e desenvolvimento
