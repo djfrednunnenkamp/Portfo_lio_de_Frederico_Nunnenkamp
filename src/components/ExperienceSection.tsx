@@ -37,7 +37,7 @@ const ExperienceSection = () => {
           {experiences.map((exp, index) => (
             <Card 
               key={index}
-              className="bg-card shadow-soft hover:shadow-medium transition-all duration-300 animate-fade-in"
+              className="bg-card shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader>
