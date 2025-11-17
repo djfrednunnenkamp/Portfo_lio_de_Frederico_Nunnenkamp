@@ -5,23 +5,13 @@ const hobbies = [
   {
     icon: Music,
     title: "DJ",
-    description: "Experiência tocando em festas, desenvolvendo repertório e leitura de pista",
-    items: [
-      "Estudo sob orientação do DJ Lê Araujo",
-      "Desenvolvendo repertório musical diversificado",
-      "Leitura de pista e técnicas de mixagem"
-    ],
+    description: "Experiência tocando em festas, desenvolvendo repertório e leitura de pista. Estudo sob orientação do DJ Lê Araujo.",
     gradient: "from-accent/20 to-accent/5",
   },
   {
     icon: Sailboat,
     title: "Vela - Classe Soling",
-    description: "Participação ativa em competições nacionais e internacionais",
-    items: [
-      "Integro equipe de HP",
-      "Campeonato Brasileiro e Mundial 2025 em Porto Alegre",
-      "Habilitações: Arrais Amador e Motonauta"
-    ],
+    description: "Integro equipe de HP, participação em regatas nacionais e internacionais incluindo Campeonato Brasileiro e Mundial 2025 em Porto Alegre. Habilitações: Arrais Amador e Motonauta.",
     gradient: "from-primary/20 to-primary/5",
   },
 ];
@@ -53,15 +43,7 @@ const HobbiesSection = () => {
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground mb-4">{hobby.description}</p>
-                <ul className="space-y-2">
-                  {hobby.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start text-sm text-foreground/80">
-                      <span className="text-accent mr-2">●</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-foreground/80">{hobby.description}</p>
               </CardContent>
             </Card>
           ))}
