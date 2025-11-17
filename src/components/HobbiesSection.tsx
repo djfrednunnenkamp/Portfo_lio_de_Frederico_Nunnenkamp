@@ -16,8 +16,8 @@ const hobbies = [
   },
   {
     icon: Users,
-    title: "Robótica & Makerspace",
-    description: "Atuação em equipes FLL/FTC/RescBots, mentor por 3 anos, 4º lugar no Robot Game 2025. Gestão de compras, orçamentos e produções sob demanda.",
+    title: "Robótica",
+    description: "Atuação em equipes FLL/FTC/RescBots, mentor por 3 anos, 4º lugar no Robot Game 2025. Paixão por competições e ensino de robótica.",
     gradient: "from-primary/30 to-primary/10",
   },
 ];
