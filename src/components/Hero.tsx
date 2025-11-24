@@ -1,12 +1,21 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Languages } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
 import profilePhoto from "@/assets/profile-photo.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations";
 
 const Hero = () => {
+  const { language, setLanguage } = useLanguage();
+  const t = translations[language].hero;
+  
   const scrollToContent = () => {
     const element = document.getElementById("expertise");
     element?.scrollIntoView({ behavior: "smooth" });
+  };
+  
+  const toggleLanguage = () => {
+    setLanguage(language === 'pt' ? 'en' : 'pt');
   };
 
   const calculateAge = () => {
@@ -35,6 +44,16 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-cyan-500/90" />
       </div>
       
+      <Button
+        variant="secondary"
+        size="icon"
+        onClick={toggleLanguage}
+        className="absolute top-4 right-4 z-20 shadow-large"
+        aria-label="Toggle language"
+      >
+        <Languages className="h-5 w-5" />
+      </Button>
+      
       <div className="container relative z-10 px-4 py-20 mx-auto animate-fade-in">
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 max-w-6xl mx-auto">
           <div className="flex-shrink-0">
@@ -47,16 +66,16 @@ const Hero = () => {
           
           <div className="text-center md:text-left">
             <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6">
-              Frederico Nunnenkamp
+              {t.title}
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-2">
-              Maker & Engenheiro
+              {t.subtitle}
             </p>
             <p className="text-lg md:text-xl text-primary-foreground/80 mb-4">
-              {calculateAge()} anos
+              {calculateAge()} {t.years}
             </p>
             <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl">
-              Transformando ideias em realidade através de impressão 3D, automação, eletrônica e desenvolvimento
+              {t.description}
             </p>
             <Button 
               size="lg"
@@ -64,7 +83,7 @@ const Hero = () => {
               onClick={scrollToContent}
               className="group shadow-large hover:shadow-medium transition-all"
             >
-              Conheça meu trabalho
+              {t.cta}
               <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
             </Button>
           </div>

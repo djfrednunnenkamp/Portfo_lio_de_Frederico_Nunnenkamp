@@ -1,35 +1,39 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Music, Sailboat, Bot } from "lucide-react";
-
-const hobbies = [
-  {
-    icon: Music,
-    title: "DJ",
-    description: "Experiência tocando em festas, desenvolvendo repertório e leitura de pista. Estudo sob orientação do DJ Lê Araujo.",
-    gradient: "from-accent/20 to-accent/5",
-  },
-  {
-    icon: Sailboat,
-    title: "Vela - Classe Soling",
-    description: "Integro equipe de HP, participação em regatas nacionais e internacionais incluindo Campeonato Brasileiro e Mundial 2025 em Porto Alegre. Habilitações: Arrais Amador e Motonauta.",
-    gradient: "from-primary/20 to-primary/5",
-  },
-  {
-    icon: Bot,
-    title: "Robótica",
-    description: "Atuação em equipes FLL/FTC/RescBots, mentor por 3 anos, 4º lugar no Robot Game 2025. Paixão por competições e ensino de robótica.",
-    gradient: "from-primary/30 to-primary/10",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations";
 
 const HobbiesSection = () => {
+  const { language } = useLanguage();
+  const t = translations[language].hobbies;
+  
+  const hobbies = [
+    {
+      icon: Music,
+      title: t.dj.title,
+      description: t.dj.description,
+      gradient: "from-accent/20 to-accent/5",
+    },
+    {
+      icon: Sailboat,
+      title: t.sailing.title,
+      description: t.sailing.description,
+      gradient: "from-primary/20 to-primary/5",
+    },
+    {
+      icon: Bot,
+      title: t.robotics.title,
+      description: t.robotics.description,
+      gradient: "from-primary/30 to-primary/10",
+    },
+  ];
   return (
     <section className="py-20 bg-background" id="hobbies">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Hobbies & Interesses</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.title}</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Além da tecnologia, paixões que desenvolvem disciplina e criatividade
+            {t.subtitle}
           </p>
         </div>
         

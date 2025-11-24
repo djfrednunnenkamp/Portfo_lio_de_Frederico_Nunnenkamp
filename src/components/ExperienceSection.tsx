@@ -1,35 +1,39 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AirVent, Wrench, Box } from "lucide-react";
-
-const experiences = [
-  {
-    icon: Box,
-    title: "Makerspace",
-    role: "Gestão e Produções",
-    description: "Gestão de compras, orçamentos e produções sob demanda. Experiência em coordenação de projetos e recursos.",
-  },
-  {
-    icon: Wrench,
-    title: "Oficina Mecânica",
-    role: "Estágio Prático - 2 semanas",
-    description: "Experiência em manutenção de veículos, desenvolvendo disciplina e cuidado com ferramentas e procedimentos.",
-  },
-  {
-    icon: AirVent,
-    title: "Empresa de Ar-Condicionado",
-    role: "Estágio Prático - 1 mês",
-    description: "Aprendizado em montagem, desmontagem e limpeza de aparelhos, com foco em qualidade e segurança.",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations";
 
 const ExperienceSection = () => {
+  const { language } = useLanguage();
+  const t = translations[language].experience;
+  
+  const experiences = [
+    {
+      icon: Box,
+      title: t.makerspace.title,
+      role: t.makerspace.role,
+      description: t.makerspace.description,
+    },
+    {
+      icon: Wrench,
+      title: t.mechanic.title,
+      role: t.mechanic.role,
+      description: t.mechanic.description,
+    },
+    {
+      icon: AirVent,
+      title: t.airConditioning.title,
+      role: t.airConditioning.role,
+      description: t.airConditioning.description,
+    },
+  ];
   return (
     <section className="py-20 bg-muted/30" id="experiencias">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Experiências</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.title}</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Trajetória prática em robótica, manutenção e gestão de projetos
+            {t.subtitle}
           </p>
         </div>
         

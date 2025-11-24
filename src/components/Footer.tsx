@@ -1,6 +1,10 @@
 import { Mail, Instagram } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations";
 
 const Footer = () => {
+  const { language } = useLanguage();
+  const t = translations[language].footer;
   return (
     <footer className="bg-card border-t border-border py-12">
       <div className="container px-4 mx-auto">
@@ -25,7 +29,7 @@ const Footer = () => {
           </div>
           
           <div className="text-center text-sm text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} Frederico Nunnenkamp. Todos os direitos reservados.</p>
+            <p>&copy; {new Date().getFullYear()} Frederico Nunnenkamp. {t.rights}</p>
           </div>
         </div>
       </div>
