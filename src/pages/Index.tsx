@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import ExpertiseCard from "@/components/ExpertiseCard";
 import ExperienceSection from "@/components/ExperienceSection";
+import ProjectsSection from "@/components/ProjectsSection";
 import HobbiesSection from "@/components/HobbiesSection";
 import Footer from "@/components/Footer";
 import { Printer, Cpu, Home, Globe, Code, Lightbulb } from "lucide-react";
@@ -101,6 +102,7 @@ const Index = () => {
       </section>
 
       <ExperienceSection />
+      <ProjectsSection />
       <HobbiesSection />
       <Footer />
     </div>
