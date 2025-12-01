@@ -13,7 +13,7 @@ interface ProjectCardProps {
 const ProjectCard = ({ icon: Icon, title, description, technologies, delay = "0s" }: ProjectCardProps) => {
   return (
     <Card 
-      className="bg-card shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 animate-fade-in"
+      className="bg-card shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 animate-fade-in w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
       style={{ animationDelay: delay }}
     >
       <CardHeader>
