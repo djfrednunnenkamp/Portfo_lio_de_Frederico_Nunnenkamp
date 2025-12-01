@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Languages } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -14,9 +14,6 @@ const Hero = () => {
     element?.scrollIntoView({ behavior: "smooth" });
   };
   
-  const toggleLanguage = () => {
-    setLanguage(language === 'pt' ? 'en' : 'pt');
-  };
 
   const calculateAge = () => {
     const birthDate = new Date(2007, 8, 18); // Month is 0-indexed, so 8 = September
@@ -43,16 +40,6 @@ const Hero = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-cyan-500/90" />
       </div>
-      
-      <Button
-        variant="secondary"
-        size="icon"
-        onClick={toggleLanguage}
-        className="absolute top-4 right-4 z-20 shadow-large"
-        aria-label="Toggle language"
-      >
-        <Languages className="h-5 w-5" />
-      </Button>
       
       <div className="container relative z-10 px-4 py-20 mx-auto animate-fade-in">
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 max-w-6xl mx-auto">

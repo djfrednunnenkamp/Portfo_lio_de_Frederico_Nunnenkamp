@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import LanguageToggle from "@/components/LanguageToggle";
 import ExpertiseCard from "@/components/ExpertiseCard";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
@@ -53,6 +54,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <LanguageToggle />
       <Hero />
       
       <section className="py-20 bg-background" id="expertise">

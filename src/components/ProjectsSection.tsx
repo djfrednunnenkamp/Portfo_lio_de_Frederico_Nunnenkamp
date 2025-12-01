@@ -38,7 +38,7 @@ const ProjectsSection = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}
