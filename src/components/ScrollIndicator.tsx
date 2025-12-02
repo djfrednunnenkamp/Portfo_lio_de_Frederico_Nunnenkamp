@@ -2,7 +2,7 @@ import { ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const ScrollIndicator = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -10,9 +10,10 @@ const ScrollIndicator = () => {
       const scrollTop = window.scrollY;
       const clientHeight = window.innerHeight;
       
-      // Hide when near the bottom (within 100px)
+      // Hide when at top (Hero section) or near the bottom
+      const atTop = scrollTop < clientHeight * 0.5;
       const nearBottom = scrollTop + clientHeight >= scrollHeight - 100;
-      setIsVisible(!nearBottom);
+      setIsVisible(!atTop && !nearBottom);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -25,11 +26,11 @@ const ScrollIndicator = () => {
 
   return (
     <button
-      onClick={() => window.scrollBy({ top: window.innerHeight * 0.8, behavior: "smooth" })}
-      className="fixed bottom-8 left-1/2 -translate-x-1/2 z-40 p-2 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 hover:bg-primary/30 transition-all cursor-pointer animate-bounce"
+      onClick={() => window.scrollBy({ top: window.innerHeight * 0.6, behavior: "smooth" })}
+      className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 p-1.5 rounded-full bg-muted/50 backdrop-blur-sm hover:bg-muted/70 transition-all cursor-pointer opacity-60 hover:opacity-100"
       aria-label="Scroll down"
     >
-      <ChevronDown className="h-6 w-6 text-primary" />
+      <ChevronDown className="h-4 w-4 text-muted-foreground animate-bounce" />
     </button>
   );
 };
