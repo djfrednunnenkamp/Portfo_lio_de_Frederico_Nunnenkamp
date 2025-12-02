@@ -55,11 +55,14 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <LanguageToggle />
-      <Hero />
+      <div className="relative">
+        <Hero />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+      </div>
       
       <section className="py-20 bg-background" id="expertise">
         <div className="container px-4 mx-auto">
-        <div className="text-center mb-12 animate-fade-in">
+          <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.title}</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               {t.subtitle}
