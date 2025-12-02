@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import LanguageToggle from "@/components/LanguageToggle";
+import ScrollIndicator from "@/components/ScrollIndicator";
 import ExpertiseCard from "@/components/ExpertiseCard";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
@@ -55,10 +56,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <LanguageToggle />
-      <div className="relative">
-        <Hero />
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
-      </div>
+      <ScrollIndicator />
+      <Hero />
       
       <section className="py-20 bg-background" id="expertise">
         <div className="container px-4 mx-auto">
