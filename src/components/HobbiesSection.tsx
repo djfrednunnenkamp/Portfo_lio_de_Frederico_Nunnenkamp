@@ -6,7 +6,7 @@ import { translations } from "@/translations";
 const HobbiesSection = () => {
   const { language } = useLanguage();
   const t = translations[language].hobbies;
-  
+
   const hobbies = [
     {
       icon: Music,
@@ -15,13 +15,13 @@ const HobbiesSection = () => {
       gradient: "from-accent/20 to-accent/5",
     },
     {
-      icon: Sailboat,
+      icon: Bot,
       title: t.sailing.title,
       description: t.sailing.description,
       gradient: "from-primary/20 to-primary/5",
     },
     {
-      icon: Bot,
+      icon: Sailboat,
       title: t.robotics.title,
       description: t.robotics.description,
       gradient: "from-primary/30 to-primary/10",
@@ -36,10 +36,10 @@ const HobbiesSection = () => {
             {t.subtitle}
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {hobbies.map((hobby, index) => (
-            <Card 
+            <Card
               key={index}
               className={`bg-gradient-to-br ${hobby.gradient} border-border/50 shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 animate-fade-in`}
               style={{ animationDelay: `${index * 0.1}s` }}

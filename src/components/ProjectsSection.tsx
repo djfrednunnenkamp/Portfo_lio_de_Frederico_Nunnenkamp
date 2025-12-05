@@ -1,30 +1,36 @@
 import ProjectCard from "@/components/ProjectCard";
-import { Home, Cpu, Zap } from "lucide-react";
+import { Home, ToggleLeft, Radar, Wrench } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
 
 const ProjectsSection = () => {
   const { language } = useLanguage();
   const t = translations[language].projects;
-  
+
   const projects = [
     {
       icon: Home,
       title: t.homeAutomation.title,
       description: t.homeAutomation.description,
-      technologies: ["Home Assistant", "ESP32", "MQTT", "ESPHome", "Raspberry Pi"],
+      technologies: t.homeAutomation.technologies,
     },
     {
-      icon: Cpu,
+      icon: ToggleLeft,
       title: t.iotDevices.title,
       description: t.iotDevices.description,
-      technologies: ["ESP32", "MicroPython", "MQTT", "PCB Design", "Fusion 360"],
+      technologies: t.iotDevices.technologies,
     },
     {
-      icon: Zap,
+      icon: Radar,
       title: t.dashboard.title,
       description: t.dashboard.description,
-      technologies: ["Python", "Flask", "Docker", "Nginx", "MariaDB"],
+      technologies: t.dashboard.technologies,
+    },
+    {
+      icon: Wrench,
+      title: t.Manutençãoautomotiva.title,
+      description: t.Manutençãoautomotiva.description,
+      technologies: t.Manutençãoautomotiva.technologies,
     },
   ];
 
@@ -37,7 +43,7 @@ const ProjectsSection = () => {
             {t.subtitle}
           </p>
         </div>
-        
+
         <div className="flex flex-wrap justify-center gap-6">
           {projects.map((project, index) => (
             <ProjectCard

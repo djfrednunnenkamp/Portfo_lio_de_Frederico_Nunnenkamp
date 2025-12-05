@@ -6,7 +6,7 @@ import { translations } from "@/translations";
 const ExperienceSection = () => {
   const { language } = useLanguage();
   const t = translations[language].experience;
-  
+
   const experiences = [
     {
       icon: Box,
@@ -36,10 +36,10 @@ const ExperienceSection = () => {
             {t.subtitle}
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {experiences.map((exp, index) => (
-            <Card 
+            <Card
               key={index}
               className="bg-card shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}

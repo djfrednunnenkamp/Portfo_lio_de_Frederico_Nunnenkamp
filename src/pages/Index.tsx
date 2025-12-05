@@ -1,6 +1,5 @@
 import Hero from "@/components/Hero";
 import LanguageToggle from "@/components/LanguageToggle";
-import ScrollIndicator from "@/components/ScrollIndicator";
 import ExpertiseCard from "@/components/ExpertiseCard";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
@@ -13,7 +12,7 @@ import { translations } from "@/translations";
 const Index = () => {
   const { language } = useLanguage();
   const t = translations[language].expertise;
-  
+
   const expertiseAreas = [
     {
       icon: Printer,
@@ -56,18 +55,17 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <LanguageToggle />
-      <ScrollIndicator />
       <Hero />
-      
-      <section className="py-12 bg-background" id="expertise">
-        <div className="container px-4 mx-auto">
+
+      <section className="py-7 bg-background" id="expertise">
+        <div className="text-center mb-12 animate-fade-in">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.title}</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               {t.subtitle}
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {expertiseAreas.map((area, index) => (
               <ExpertiseCard
