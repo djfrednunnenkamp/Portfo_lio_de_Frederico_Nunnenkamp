@@ -59,7 +59,7 @@ const Index = () => {
       <ScrollIndicator />
       <Hero />
       
-      <section className="py-20 bg-background" id="expertise">
+      <section className="py-12 bg-background" id="expertise">
         <div className="container px-4 mx-auto">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.title}</h2>
