@@ -158,7 +158,7 @@ export const translations = {
       dj: {
         title: "DJ",
         description:
-          "Experiência tocando em festas, desenvolvendo repertório e leitura de pista. Estudo sob orientação do DJ Lê Araujo.",
+          "Experiência tocando em festas, desenvolvendo repertório e leitura de pista. Estudo sob orientação do DJ Lê Araujo e toquei no Planeta Atlântida 2026 pelo Banrisul, no estande da marca.",
       },
       sailing: {
         title: "Robótica",
@@ -334,7 +334,7 @@ export const translations = {
       dj: {
         title: "DJ",
         description:
-          "Experience playing at parties, developing repertoire and crowd reading. Studying under the guidance of DJ Lê Araujo.",
+          "Experience performing at parties, developing repertoire, and reading the crowd. I study under the guidance of DJ Lê Araujo and performed at Planeta Atlântida 2026 through Banrisul, playing at their stand.",
       },
       sailing: {
         title: "Robotics",
