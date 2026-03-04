@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
 
           <div className="text-center text-sm text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} Frederico oi Nunnenkamp. {t.rights}</p>
+            <p>&copy; {new Date().getFullYear()} Frederico Nunnenkamp. {t.rights}</p>
           </div>
         </div>
       </div>
