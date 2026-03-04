@@ -1,7 +1,7 @@
 export const translations = {
   pt: {
     hero: {
-      title: "Frederico Nunnenkamp",
+      title: "Frederico oi Nunnenkamp",
       subtitle: "Maker & Velejador & DJ",
       years: "anos",
       description:
